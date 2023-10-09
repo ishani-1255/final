@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Literary Treasure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #777;
+        }
+
+        #question {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        #answer-input {
+            margin-top: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+
+        #submit-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #result {
+            font-size: 18px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        #congratulations {
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The Ultimate Literary Treasure</h1>
+        <p>Congratulations, you've reached the grand finale!</p>
+        <p>Answer the following question to unveil the ultimate prize in your literary quest:</p>
+
+        <p id="question">Who said, "I am a cage, in search of a bird"?</p>
+        <input type="text" id="answer-input" placeholder="Your Answer">
+        <button id="submit-button">Submit</button>
+
+        <p id="result"><span id="congratulations">Congratulations!</span> You've unlocked the ultimate literary treasure.</p>
+    </div>
+
+    <script>
+        // JavaScript code to check the answer and display the result
+        document.addEventListener("DOMContentLoaded", function () {
+            const answerInput = document.getElementById("answer-input");
+            const submitButton = document.getElementById("submit-button");
+            const result = document.getElementById("result");
+
+            submitButton.addEventListener("click", function () {
+                const userAnswer = answerInput.value.trim().toLowerCase();
+                if (userAnswer === "kafka") {
+                    result.style.display = "block";
+                } else {
+                    alert("Incorrect answer. Keep exploring!");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
